@@ -8,6 +8,7 @@ val akkaVersion = "2.6.8"
 val akkaHttpVersion = "10.2.2"
 val scalaTestVersion = "3.2.2"
 val circeVersion = "0.12.3"
+val akkaHttpJsonSerializersVersion = "1.35.2"
 
 libraryDependencies += "org.scalactic" %% "scalactic" % scalaTestVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % scalaTestVersion
@@ -34,6 +35,8 @@ libraryDependencies ++= Seq(
   // akka
   "com.typesafe.akka" %% "akka-testkit" % akkaVersion,
   "com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
+  "de.heikoseeberger" %% "akka-http-circe" % akkaHttpJsonSerializersVersion,
+  "de.heikoseeberger" %% "akka-http-jackson" % akkaHttpJsonSerializersVersion,
 
   // logging
   "org.apache.logging.log4j" % "log4j-api" % "2.4.1",
